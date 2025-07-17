@@ -1,14 +1,18 @@
 package com.nikhilmangali1.CourseSearchService.document;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.DateFormat;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
-import java.time.ZonedDateTime;
+import java.time.OffsetDateTime;
+
 
 @Document(indexName = "courses")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CourseDocument {
 
     @Id
@@ -38,8 +42,9 @@ public class CourseDocument {
     @Field(type = FieldType.Double)
     private double price;
 
+//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ssXXX")
     @Field(type = FieldType.Date, format = DateFormat.date_time)
-    private ZonedDateTime nextSessionDate;
+    private OffsetDateTime nextSessionDate;
 
     public String getId() {
         return id;
@@ -113,11 +118,11 @@ public class CourseDocument {
         this.price = price;
     }
 
-    public ZonedDateTime getNextSessionDate() {
+    public OffsetDateTime getNextSessionDate() {
         return nextSessionDate;
     }
 
-    public void setNextSessionDate(ZonedDateTime nextSessionDate) {
+    public void setNextSessionDate(OffsetDateTime nextSessionDate) {
         this.nextSessionDate = nextSessionDate;
     }
 }
