@@ -122,11 +122,201 @@ Search for courses with flexible filters and sorting.
 ```bash
 curl "http://localhost:8080/api/search?category=Math&type=CLUB"
 ```
+output(POSTMAN - GET : http://localhost:8080/api/search?category=Math&type=CLUB ):
+```bash
+{
+    "total": 4,
+    "courses": [
+        {
+            "id": "8",
+            "title": "Chess for Kids",
+            "description": "Strategic thinking through chess basics and tactics.",
+            "category": "Math",
+            "type": "CLUB",
+            "gradeRange": "2nd–5th",
+            "minAge": 7,
+            "maxAge": 10,
+            "price": 145.0,
+            "nextSessionDate": 1753621200.000000000
+        },
+        {
+            "id": "22",
+            "title": "Numbers & Patterns",
+            "description": "Math activities focusing on sequences and logic.",
+            "category": "Math",
+            "type": "CLUB",
+            "gradeRange": "2nd–4th",
+            "minAge": 7,
+            "maxAge": 9,
+            "price": 150.0,
+            "nextSessionDate": 1753952400.000000000
+        },
+        {
+            "id": "14",
+            "title": "Math Wizards",
+            "description": "Crack math puzzles and logic challenges.",
+            "category": "Math",
+            "type": "CLUB",
+            "gradeRange": "4th–6th",
+            "minAge": 9,
+            "maxAge": 11,
+            "price": 190.0,
+            "nextSessionDate": 1754136000.000000000
+        },
+        {
+            "id": "42",
+            "title": "Brain Boosters",
+            "description": "Games and exercises to improve memory and focus.",
+            "category": "Math",
+            "type": "CLUB",
+            "gradeRange": "3rd–4th",
+            "minAge": 8,
+            "maxAge": 9,
+            "price": 175.0,
+            "nextSessionDate": 1756305000.000000000
+        }
+    ],
+    "page": 0,
+    "size": 10,
+    "totalPages": 1
+}
+```
 
 #### 2. Search by Age, Price, and Date
 
 ```bash
 curl "http://localhost:8080/api/search?minAge=8&maxAge=10&minPrice=100&maxPrice=250&startDate=2025-08-01T00:00:00Z"
+```
+output(POSTMAN - GET : output(POSTMAN - GET : http://localhost:8080/api/search?category=Math&type=CLUB ):
+```bash
+{
+    "total": 23,
+    "courses": [
+        {
+            "id": "3",
+            "title": "Science Explorers",
+            "description": "Hands-on science experiments for curious young minds.",
+            "category": "Science",
+            "type": "ONE_TIME",
+            "gradeRange": "3rd–5th",
+            "minAge": 8,
+            "maxAge": 11,
+            "price": 149.0,
+            "nextSessionDate": 1754046000.000000000
+        },
+        {
+            "id": "23",
+            "title": "Science of Food",
+            "description": "Explore nutrition, digestion, and kitchen science.",
+            "category": "Science",
+            "type": "ONE_TIME",
+            "gradeRange": "3rd–5th",
+            "minAge": 8,
+            "maxAge": 10,
+            "price": 175.5,
+            "nextSessionDate": 1754051400.000000000
+        },
+        {
+            "id": "14",
+            "title": "Math Wizards",
+            "description": "Crack math puzzles and logic challenges.",
+            "category": "Math",
+            "type": "CLUB",
+            "gradeRange": "4th–6th",
+            "minAge": 9,
+            "maxAge": 11,
+            "price": 190.0,
+            "nextSessionDate": 1754136000.000000000
+        },
+        {
+            "id": "7",
+            "title": "Little Coders",
+            "description": "Fun with basic coding concepts for beginners.",
+            "category": "Technology",
+            "type": "COURSE",
+            "gradeRange": "3rd–5th",
+            "minAge": 8,
+            "maxAge": 10,
+            "price": 210.5,
+            "nextSessionDate": 1754211600.000000000
+        },
+        {
+            "id": "25",
+            "title": "Geometry in Motion",
+            "description": "Learn shapes, symmetry, and angles using movement.",
+            "category": "Math",
+            "type": "COURSE",
+            "gradeRange": "4th–6th",
+            "minAge": 9,
+            "maxAge": 11,
+            "price": 220.0,
+            "nextSessionDate": 1754227800.000000000
+        },
+        {
+            "id": "20",
+            "title": "Ecology Adventures",
+            "description": "Learn ecosystems and wildlife preservation hands-on.",
+            "category": "Science",
+            "type": "COURSE",
+            "gradeRange": "4th–6th",
+            "minAge": 9,
+            "maxAge": 11,
+            "price": 230.0,
+            "nextSessionDate": 1754560800.000000000
+        },
+        {
+            "id": "16",
+            "title": "Physics in Real Life",
+            "description": "Daily life physics explored with fun demonstrations.",
+            "category": "Science",
+            "type": "COURSE",
+            "gradeRange": "5th–6th",
+            "minAge": 10,
+            "maxAge": 12,
+            "price": 250.0,
+            "nextSessionDate": 1754821800.000000000
+        },
+        {
+            "id": "34",
+            "title": "Math Around Us",
+            "description": "Real-life math through shopping, cooking, and games.",
+            "category": "Math",
+            "type": "COURSE",
+            "gradeRange": "3rd–5th",
+            "minAge": 8,
+            "maxAge": 10,
+            "price": 225.0,
+            "nextSessionDate": 1755086400.000000000
+        },
+        {
+            "id": "26",
+            "title": "Astronomy Nights",
+            "description": "Virtual telescope sessions and astronomy basics.",
+            "category": "Science",
+            "type": "ONE_TIME",
+            "gradeRange": "5th–6th",
+            "minAge": 10,
+            "maxAge": 12,
+            "price": 199.0,
+            "nextSessionDate": 1755280800.000000000
+        },
+        {
+            "id": "31",
+            "title": "Plant Biology",
+            "description": "Study photosynthesis, germination, and plant ecosystems.",
+            "category": "Science",
+            "type": "COURSE",
+            "gradeRange": "3rd–5th",
+            "minAge": 8,
+            "maxAge": 10,
+            "price": 210.0,
+            "nextSessionDate": 1755342000.000000000
+        }
+    ],
+    "page": 0,
+    "size": 10,
+    "totalPages": 3
+}
 ```
 
 #### 3. Full-text Search and Lowest Price First
@@ -134,43 +324,74 @@ curl "http://localhost:8080/api/search?minAge=8&maxAge=10&minPrice=100&maxPrice=
 ```bash
 curl "http://localhost:8080/api/search?q=chess&sort=priceAsc"
 ```
+output(POSTMAN - GET : http://localhost:8080/api/search?q=chess&sort=priceAsc ):
+```bash
+{
+    "total": 1,
+    "courses": [
+        {
+            "id": "8",
+            "title": "Chess for Kids",
+            "description": "Strategic thinking through chess basics and tactics.",
+            "category": "Math",
+            "type": "CLUB",
+            "gradeRange": "2nd–5th",
+            "minAge": 7,
+            "maxAge": 10,
+            "price": 145.0,
+            "nextSessionDate": 1753621200.000000000
+        }
+    ],
+    "page": 0,
+    "size": 10,
+    "totalPages": 1
+}
+```
 
 #### 4. All Filters Combined (with Pagination)
 
 ```bash
 curl "http://localhost:8080/api/search?q=math&category=Math&type=CLUB&minAge=7&maxAge=11&minPrice=100&maxPrice=200&sort=priceAsc&page=0&size=10&startDate=2025-07-17T18:30:00Z"
 ```
+output(POSTMAN - GET : output(POSTMAN - GET : http://localhost:8080/api/search?category=Math&type=CLUB ):
+```bash
+{
+    "total": 2,
+    "courses": [
+        {
+            "id": "22",
+            "title": "Numbers & Patterns",
+            "description": "Math activities focusing on sequences and logic.",
+            "category": "Math",
+            "type": "CLUB",
+            "gradeRange": "2nd–4th",
+            "minAge": 7,
+            "maxAge": 9,
+            "price": 150.0,
+            "nextSessionDate": 1753952400.000000000
+        },
+        {
+            "id": "14",
+            "title": "Math Wizards",
+            "description": "Crack math puzzles and logic challenges.",
+            "category": "Math",
+            "type": "CLUB",
+            "gradeRange": "4th–6th",
+            "minAge": 9,
+            "maxAge": 11,
+            "price": 190.0,
+            "nextSessionDate": 1754136000.000000000
+        }
+    ],
+    "page": 0,
+    "size": 10,
+    "totalPages": 1
+}
+```
 
 ---
 
-### Response Format
 
-```json
-{
-  "total": 2,
-  "courses": [
-    {
-      "id": "22",
-      "title": "Numbers & Patterns",
-      "category": "Math",
-      "type": "CLUB",
-      "price": 150.0,
-      "nextSessionDate": "2025-07-31T09:00:00Z"
-    },
-    {
-      "id": "14",
-      "title": "Math Wizards",
-      "category": "Math",
-      "type": "CLUB",
-      "price": 190.0,
-      "nextSessionDate": "2025-08-02T12:00:00Z"
-    }
-  ],
-  "page": 0,
-  "size": 10,
-  "totalPages": 1
-}
-```
 
 ---
 
